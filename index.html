@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>日本東北6日遊｜綠動心弦．極上療癒</title>
+  <meta name="description" content="XX旅行社｜日本東北6日深度之旅，慢下腳步，感受大自然的療癒力量。" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", sans-serif; color: #2c2c2c; line-height: 1.8; scroll-behavior: smooth; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ─── Navigation ─── */
+    nav {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+      background: rgba(255,255,255,0.92); backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 64px;
+    }
+    nav .logo { font-size: 18px; font-weight: 700; letter-spacing: 2px; color: #3a5a40; }
+    nav .logo span { color: #a3b18a; }
+    nav ul { display: flex; gap: 28px; list-style: none; }
+    nav ul li a {
+      font-size: 14px; font-weight: 500; color: #555;
+      transition: color 0.2s; letter-spacing: 1px;
+    }
+    nav ul li a:hover { color: #3a5a40; }
+
+    /* ─── Hero ─── */
+    .hero {
+      margin-top: 64px; min-height: 92vh; position: relative;
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      background: url('背景.png') center center / cover no-repeat;
+    }
+    .hero::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(30,50,30,0.55) 0%, rgba(0,0,0,0.30) 100%);
+    }
+    .hero-content { position: relative; z-index: 1; color: #fff; padding: 20px; max-width: 780px; }
+    .hero-content .logo-badge {
+      display: inline-block; margin-bottom: 24px;
+      font-size: 13px; letter-spacing: 4px; font-weight: 400;
+      background: rgba(255,255,255,0.18); backdrop-filter: blur(4px);
+      padding: 6px 20px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.25);
+    }
+    .hero-content h1 { font-size: clamp(36px, 7vw, 64px); font-weight: 800; letter-spacing: 6px; line-height: 1.3; margin-bottom: 16px; }
+    .hero-content h1 small { display: block; font-size: 22px; font-weight: 300; letter-spacing: 4px; opacity: 0.85; margin-top: 8px; }
+    .hero-content .info { margin-top: 24px; display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; font-size: 15px; font-weight: 400; opacity: 0.9; letter-spacing: 1px; }
+    .hero-content .info i { display: inline-block; margin-right: 6px; opacity: 0.7; }
+    .hero-cta { margin-top: 36px; display: inline-block; padding: 14px 48px; border: 2px solid #fff; border-radius: 50px; font-size: 15px; font-weight: 600; letter-spacing: 3px; color: #fff; transition: 0.25s; }
+    .hero-cta:hover { background: #fff; color: #2c2c2c; }
+
+    /* ─── Sections ─── */
+    section { padding: 96px 40px; max-width: 1100px; margin: 0 auto; }
+    .section-title { text-align: center; margin-bottom: 48px; }
+    .section-title h2 { font-size: 30px; font-weight: 700; letter-spacing: 4px; color: #3a5a40; }
+    .section-title p { margin-top: 10px; font-size: 15px; color: #888; letter-spacing: 1px; }
+
+    /* ─── Intro ─── */
+    #intro { background: #f8faf6; max-width: 100%; }
+    #intro .inner { max-width: 1100px; margin: 0 auto; }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .intro-grid .text { font-size: 15px; color: #444; letter-spacing: 0.5px; }
+    .intro-grid .text .quote { font-size: 20px; font-weight: 600; color: #3a5a40; border-left: 4px solid #a3b18a; padding-left: 20px; margin-bottom: 20px; font-style: italic; }
+    .intro-grid .text .core { margin-top: 24px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .intro-grid .text .core span { background: #e8ede4; padding: 6px 16px; border-radius: 20px; font-size: 13px; color: #3a5a40; }
+    .intro-image { width: 100%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+
+    /* ─── Highlights ─── */
+    .highlights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .highlight-card {
+      background: #fff; border-radius: 16px; padding: 32px 24px; text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #f0f0f0;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .highlight-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+    .highlight-card .icon { width: 56px; height: 56px; margin: 0 auto 16px; background: #e8ede4; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .highlight-card .icon svg { width: 28px; height: 28px; fill: none; stroke: #3a5a40; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .highlight-card h3 { font-size: 17px; font-weight: 700; color: #3a5a40; margin-bottom: 4px; }
+    .highlight-card .day { font-size: 12px; color: #a3b18a; font-weight: 600; letter-spacing: 2px; margin-bottom: 8px; }
+    .highlight-card p { font-size: 14px; color: #666; }
+
+    /* ─── Form ─── */
+    #form { background: #f8faf6; max-width: 100%; }
+    #form .inner { max-width: 720px; margin: 0 auto; }
+    .form-embed { width: 100%; border: none; border-radius: 12px; min-height: 640px; }
+
+    /* ─── Footer ─── */
+    footer {
+      background: #2c2c2c; color: #aaa; text-align: center; padding: 40px;
+      font-size: 13px; letter-spacing: 1px; line-height: 2;
+    }
+    footer strong { color: #ddd; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 768px) {
+      nav { padding: 0 16px; }
+      nav ul { gap: 12px; }
+      nav ul li a { font-size: 12px; }
+      section { padding: 56px 20px; }
+      .intro-grid { grid-template-columns: 1fr; }
+      .highlights-grid { grid-template-columns: 1fr; }
+      .hero-content .info { flex-direction: column; gap: 8px; }
+    }
+    @media (max-width: 480px) {
+      nav .logo { font-size: 14px; }
+      nav ul { gap: 8px; }
+      nav ul li a { font-size: 11px; letter-spacing: 0; }
+      .section-title h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="logo">日本東北<span>．6日</span></div>
+    <ul>
+      <li><a href="#intro">活動簡介</a></li>
+      <li><a href="#highlights">活動流程</a></li>
+      <li><a href="#form">留言表單</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <div class="hero-content">
+      <div class="logo-badge">XX 旅行社・深度之旅</div>
+      <h1>
+        綠動心弦．極上療癒
+        <small>日本東北 6 日</small>
+      </h1>
+      <div class="info">
+        <span><i>📅</i> 2026 年 8 月 22 日 – 8 月 27 日</span>
+        <span><i>📍</i> 日本 東北｜仙台・松島・奧入瀨溪流・十和田湖</span>
+      </div>
+      <a class="hero-cta" href="#intro">探索旅程</a>
+    </div>
+  </header>
+
+  <!-- Intro -->
+  <section id="intro">
+    <div class="inner">
+      <div class="section-title">
+        <h2>活動簡介</h2>
+        <p>慢下來，才能看見風景的靈魂。</p>
+      </div>
+      <div class="intro-grid">
+        <div class="text">
+          <div class="quote">「拋開都市的喧囂，不塞滿行程，每天只專注做好三件事：看一幅大自然的畫、泡一次暖心的溫泉、享用一頓在地風土料理。」</div>
+          <p>日本東北，是自然與文化交織的寶庫。從仙台的古城風華，到松島灣的碧海奇岩；從猊鼻溪的幽谷扁舟，到奧入瀨溪流的森林秘境——每一站都是值得細細品味的風景。</p>
+          <p style="margin-top:16px;">這趟六日旅程，我們不趕路、不購物壓力，只為讓您在森林與溫泉的懷抱中，找回最真實的平靜。</p>
+          <div class="core">
+            <span>🌲 森林療癒</span>
+            <span>♨️ 頂級溫泉</span>
+            <span>🍣 在地美食</span>
+            <span>🎨 藝術鑑賞</span>
+            <span>🚐 無干擾車程</span>
+          </div>
+        </div>
+        <div style="background:#e8ede4; border-radius:12px; height:320px; display:flex; align-items:center; justify-content:center; color:#a3b18a; font-size:60px; letter-spacing:4px; font-weight:700;">東北</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section id="highlights">
+    <div class="section-title">
+      <h2>活動流程</h2>
+      <p>六天五夜・每日亮點</p>
+    </div>
+    <div class="highlights-grid">
+
+      <!-- Day 1 -->
+      <div class="highlight-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9Z"/></svg>
+        </div>
+        <div class="day">DAY 1</div>
+        <h3>啟程與微醺</h3>
+        <p>台北 → 仙台空港 → 仙台市區<br/>牛舌迎賓晚宴・居酒屋微醺之夜</p>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="highlight-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7L12 12L22 7Z"/><path d="M12 12V22"/><path d="M12 12L2 17"/><path d="M12 12L22 17"/></svg>
+        </div>
+        <div class="day">DAY 2</div>
+        <h3>歷史與松島</h3>
+        <p>瑞鳳殿・松島灣遊船<br/>現烤牡蠣・秋保溫泉會席料理</p>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="highlight-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M3 12H7L9 8L12 16L15 7L17 12H21"/></svg>
+        </div>
+        <div class="day">DAY 3</div>
+        <h3>溪谷與匠人</h3>
+        <p>猊鼻溪手搖船・船夫古調<br/>中尊寺金色堂・花卷露天風呂</p>
+      </div>
+
+      <!-- Day 4 -->
+      <div class="highlight-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3C7.03 3 3 7.03 3 12C3 16.97 7.03 21 12 21C16.97 21 21 16.97 21 12C21 7.03 16.97 3 12 3Z"/><path d="M12 8V12L14 14"/></svg>
+        </div>
+        <div class="day">DAY 4</div>
+        <h3>祕境與鐵道</h3>
+        <p>奧入瀨溪流輕健行<br/>十和田湖・星野集團療癒宿</p>
+      </div>
+
+      <!-- Day 5 -->
+      <div class="highlight-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15A1.65 1.65 0 0 0 21 13.36V10.64A1.65 1.65 0 0 0 19.4 9L17 7.6A1.65 1.65 0 0 0 15.07 8.66L14.83 9.24A1.65 1.65 0 0 0 12.81 11.09V12.91A1.65 1.65 0 0 0 14.83 14.76L15.07 15.34A1.65 1.65 0 0 0 17 16.4L19.4 15Z"/><path d="M4.6 9A1.65 1.65 0 0 0 3 10.64V13.36A1.65 1.65 0 0 0 4.6 15L7 16.4A1.65 1.65 0 0 0 8.93 15.34L9.17 14.76A1.65 1.65 0 0 0 11.19 12.91V11.09A1.65 1.65 0 0 0 9.17 9.24L8.93 8.66A1.65 1.65 0 0 0 7 7.6L4.6 9Z"/></svg>
+        </div>
+        <div class="day">DAY 5</div>
+        <h3>藝術與蘋果</h3>
+        <p>十和田市現代美術館<br/>A-FACTORY 蘋果伴手禮・仙台購物</p>
+      </div>
+
+      <!-- Day 6 -->
+      <div class="highlight-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8A2 2 0 0 0 19 6H5A2 2 0 0 0 3 8V16A2 2 0 0 0 5 18H19A2 2 0 0 0 21 16Z"/><polyline points="3 10 12 14 21 10"/></svg>
+        </div>
+        <div class="day">DAY 6</div>
+        <h3>豐收與歸途</h3>
+        <p>仙台朝市散策・手作海鮮丼<br/>滿載回憶・賦歸台灣</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section id="form">
+    <div class="inner">
+      <div class="section-title">
+        <h2>留言表單</h2>
+        <p>對行程有任何疑問或建議，歡迎留言給我們</p>
+      </div>
+
+      <iframe class="form-embed" src="https://docs.google.com/forms/d/e/1FAIpQLSdV6WZeanKPiGCey34FgQG0C65XqIiE8y9UXEXQKV9AqBsTYQ/viewform?embedded=true" scrolling="yes">載入中…</iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <strong>XX 旅行社股份有限公司</strong><br/>
+    地址：台北市○○區○○路 ○○ 號 ○ 樓<br/>
+    電話：(02) ○○○○-○○○○<br/>
+    出團日期：2026 年 8 月 22 日 – 8 月 27 日<br/>
+    &copy; 2026 XX 旅行社 All Rights Reserved.
+  </footer>
+
+</body>
+</html>
